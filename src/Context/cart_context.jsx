@@ -4,14 +4,11 @@ import reducer from "../reducers/cartReducer"
 const CartContext = createContext();
 const getLoacalCartData = () =>{
     let localCartData = localStorage.getItem("RanuCart");
-    if(localCartData.length == 0 )
-        {
-            return [];
-        }
-        else{
-            
-            return JSON.parse(localCartData)
-        }
+    if (localCartData === null || localCartData.length === 0) {
+      return [];
+  } else {
+      return JSON.parse(localCartData);
+  }
 
 }
 const initialState = {

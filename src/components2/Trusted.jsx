@@ -86,6 +86,9 @@ const Wrapper = styled.section`
     animation: ${pulseAnimation} 2s infinite;
     transition: transform 0.3s ease;
     cursor: pointer;
+    flex: 1 1 15rem; /* Add flex-grow to adjust size */
+    display: flex; /* Center the images */
+    justify-content: center;
   }
 
   img {
@@ -107,8 +110,15 @@ const Wrapper = styled.section`
       padding: 0 1rem;
     }
 
+    .brand-section-slider {
+      flex-direction: column; /* Change direction to column */
+      align-items: center; /* Center the slides */
+    }
+
     .slide {
-      flex: 0 0 calc(50% - 1rem);
+      margin-bottom: 1.5rem; /* Adjust spacing */
+      width: 100%;
+      max-width: 20rem; /* Ensure images don't overflow */
     }
   }
 `;
